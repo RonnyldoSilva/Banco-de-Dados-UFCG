@@ -43,3 +43,9 @@ CREATE TABLE tabela(
   atributo3 tipo3 NOT NULL
 );
 ```
+
+Exemplo de AFTER TABLE:
+```sql
+AFTER TABLE nome_atual_da_tabela RENAME TO nome_novo;
+AFTER TABLE nome_tabela ADD COLUMN noe_atributo charvar(30);
+```
