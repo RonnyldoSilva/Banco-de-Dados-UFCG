@@ -11,3 +11,17 @@ Acesso explicito ao banco de dados:
 ```shell
 psql -d ronnyldo_db
 ```
+
+### SQL/DLL comando básicos
+
+CREATE TABLE - cria tabela; 
+DROP TABLE - deleta tabela;
+ALTER TABLE - altera tabela;
+
+### Constraints
+
+```sql
+PRIMARY KEY
+FOREIGN KEY
+NOT NULL
+```
