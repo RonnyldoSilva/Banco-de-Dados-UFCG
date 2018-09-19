@@ -14,9 +14,11 @@ psql -d ronnyldo_db
 
 ### SQL/DLL comando básicos
 
+```sql
 CREATE TABLE - cria tabela; 
 DROP TABLE - deleta tabela;
 ALTER TABLE - altera tabela;
+```
 
 ### Constraints
 
