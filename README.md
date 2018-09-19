@@ -110,3 +110,18 @@ DELETE FROM nome_da_tabel;
 ... remoção de tuplas que saisfazem a condição:
 DELETE FROM tasks WHERE status = "DONE";
 ```
+
+## Atualização de dados
+
+O coando UPDATE atualiza dados em uma tabela.
+
+Exemplos:
+```sql
+UPDATE nome_da_tabela SET nome_atributo = valor_atributo WHERE condição;
+
+UPDATE funcionario SET telefone = '8888-9999' WHERE cpf = '123456789011';
+
+UPDATE funcionario SET salario = salario+200, gratificacao = gratificacao+100
+WHERE cidade_lotacao = 'Campina Grande' AND ultima_avaliacao = 'OTIMA';
+```
+
