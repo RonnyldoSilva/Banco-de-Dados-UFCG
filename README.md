@@ -38,6 +38,8 @@ CREATE TABLE tabela(
 ```
 
 Exemplo de CREATE TABLE com constraint *NOT NULL*:
+
+
 ```sql
 CREATE TABLE tabela(
   atributo1 tipo1 NOT NULL,
@@ -65,3 +67,22 @@ Exemplos:
 ALTER TABLE nome_da_tabela ADD CONSTRAINT nome_constraint FOREIGN KEY (atributo) REFERENCES outra_tabela (atributo) ON DELETE CASCADE;
 ```
 
+## SQL/DLL + DML
+
+DML, acrônimo para Linguagem de Manipulação de Dados. Esta contém o conjunto de instruções para adicionar, modificar, consultar ou remover dados de um bando de dados.
+
+INSERT: adiciona tuplas nas tabelas.
+```sql
+... todas as colunas são preenchidas:
+INSERT INTO nome_da_tabela VALUES(valorAtributo1, valorAtributo2, valorAtributo3);
+
+... definda quais colunas serão preenchidas:
+INSERT INTO nome_da_tabela(nomeAtributo1, nomeAtributo2) VALUES (valorAtributo1, valorAtributo2);
+
+... inserção de várias tublas:
+INSERT INTO nome_da_tabela(nomeAtributo1, nomeAtributo2) 
+VALUES 
+  (valorAtributo1, valorAtributo2),
+  (valorAtributo1, valorAtributo2),
+  (valorAtributo1, valorAtributo2);
+```
