@@ -182,3 +182,12 @@ EXCLUDE USING gist (
 );
 ```
 
+No exemplo acima, *id_veiculo WITH =* significa que o EXCLUDE irá procurar valores iguais na coluna *id_veiculo*. Caso ele ache, irá verificar, apenas nas tuplas que tem *id_veiculo* são iguais, se há interseção entre os valores na coluna *periodo*. Assim, proibindo que isso se mantenha na tabela.
+
+Exemplo de EXCLUDE com WHERE:
+```sql
+-- Não permite que existe duplicação do valor "RONNYLDO", na coluna nome. Ou seja, apenas pode existir um 'RONNYLDO' na coluna nome.
+
+ADD CONSTRAINT unico_se_valor
+EXCLUDE USING gist(nome WITH =) WHERE (nome = 'RONNYLDO');
+```
