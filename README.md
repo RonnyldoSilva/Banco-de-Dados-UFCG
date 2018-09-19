@@ -1,6 +1,6 @@
 # UFCG - Database I
 
-### Acesso ao VM e ao SGBD
+## Acesso ao VM e ao SGBD
 
 Acesso a VM:
 ```shell
@@ -12,14 +12,16 @@ Acesso explicito ao banco de dados:
 psql -d ronnyldo_db
 ```
 
-### SQL/DLL comando básicos
+## SQL/DLL comando básicos
+
+Princípais comandos:
 ```sql
 CREATE TABLE - cria tabela; 
 DROP TABLE - deleta tabela;
 ALTER TABLE - altera tabela;
 ```
 
-### Constraints
+Constraints:
 ```sql
 PRIMARY KEY
 FOREIGN KEY
@@ -44,8 +46,22 @@ CREATE TABLE tabela(
 );
 ```
 
-Exemplo de AFTER TABLE:
+Exemplo de ALTER TABLE:
 ```sql
-AFTER TABLE nome_atual_da_tabela RENAME TO nome_novo;
-AFTER TABLE nome_tabela ADD COLUMN noe_atributo charvar(30);
+ALTER TABLE nome_atual_da_tabela RENAME TO nome_novo;
+ALTER TABLE nome_tabela ADD COLUMN noe_atributo charvar(30);
 ```
+
+Definição de comportamentos para FOREIGN KEYs do comando DELETE e UPDATE:
+
+```sql
+Sintaxe:
+... ON DELETE [RESTRICT | CASCADE | SET NULL]
+... ON UPDATE [RESTRICT | CASCADE | SET NULL]
+```
+
+Exemplos:
+```sql
+ALTER TABLE nome_da_tabela ADD CONSTRAINT nome_constraint FOREIGN KEY (atributo) REFERENCES outra_tabela (atributo) ON DELETE CASCADE;
+```
+
