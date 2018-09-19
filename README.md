@@ -145,3 +145,30 @@ CREATE TABLE produto (
 
 ALTER TABLE produto ADD CONSTRAINT produto_chk_preco_valido CHECK (preco > 0);
 ```
+
+## UNIQUE
+
+UNIQUE garante que não haverá valores iguais em uma mesma coluna.
+
+Exemplos:
+```sql
+CREATE TABLE pessoa (
+  cpf integer,
+  nome varchar(50) UNIQUE,
+  data_nasc date
+);
+
+CREATE TABLE pessoa (
+  cpf integer,
+  nome varchar(50),
+  data_nasc date,
+  UNIQUE (nome)
+);
+
+CREATE TABLE pessoa (
+  a integer,
+  b integer,
+  c integer,
+  UNIQUE (a, c)
+);
+```
