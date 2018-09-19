@@ -74,7 +74,7 @@ DML, acrônimo para Linguagem de Manipulação de Dados. Esta contém o conjunto
 INSERT: adiciona tuplas nas tabelas.
 ```sql
 ... todas as colunas são preenchidas:
-INSERT INTO nome_da_tabela VALUES(valorAtributo1, valorAtributo2, valorAtributo3);
+INSERT INTO nome_da_tabela VALUES (valorAtributo1, valorAtributo2, valorAtributo3);
 
 ... definda quais colunas serão preenchidas:
 INSERT INTO nome_da_tabela(nomeAtributo1, nomeAtributo2) VALUES (valorAtributo1, valorAtributo2);
@@ -85,4 +85,28 @@ VALUES
   (valorAtributo1, valorAtributo2),
   (valorAtributo1, valorAtributo2),
   (valorAtributo1, valorAtributo2);
+```
+
+## Consulta de dados
+
+SELECT, FROM e  WHERE são comandos de projeção e seleção, para verificação dos elementos inseridos na tabela.
+
+Exemplos:
+```sql
+SELECT nomeAtributo1, nomeAtributo2 FROM nome_da_tabela WHERE condição_de_seleção;
+
+SELECT nome, endereço FROM empregado WHERE salario > 1500;
+```
+
+## Remoção de dados
+
+O comando DELETE é utilizado para remover dados de uma tabela.
+
+Exemplo:
+```sql
+... remove todas as tuplas:
+DELETE FROM nome_da_tabel;
+
+... remoção de tuplas que saisfazem a condição:
+DELETE FROM tasks WHERE status = "DONE";
 ```
