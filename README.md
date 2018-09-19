@@ -1,7 +1,6 @@
 # UFCG - Database I
 
 ## Acesso ao VM e ao SGBD
-
 Acesso a VM:
 ```shell
 ssh -o ServerAliveInterval=30 ronnyldo@150.165.85.37 -p 45600
@@ -13,7 +12,6 @@ psql -d ronnyldo_db
 ```
 
 ## SQL/DLL comando básicos
-
 Princípais comandos:
 ```sql
 CREATE TABLE - cria tabela; 
@@ -58,8 +56,8 @@ Definição de comportamentos para FOREIGN KEYs do comando DELETE e UPDATE:
 
 ```sql
 Sintaxe:
-... ON DELETE [RESTRICT | CASCADE | SET NULL]
-... ON UPDATE [RESTRICT | CASCADE | SET NULL]
+-- ON DELETE [RESTRICT | CASCADE | SET NULL]
+-- ON UPDATE [RESTRICT | CASCADE | SET NULL]
 ```
 
 Exemplos:
@@ -68,18 +66,17 @@ ALTER TABLE nome_da_tabela ADD CONSTRAINT nome_constraint FOREIGN KEY (atributo)
 ```
 
 ## SQL/DLL + DML
-
 DML, acrônimo para Linguagem de Manipulação de Dados. Esta contém o conjunto de instruções para adicionar, modificar, consultar ou remover dados de um bando de dados.
 
 INSERT: adiciona tuplas nas tabelas.
 ```sql
-... todas as colunas são preenchidas:
+-- todas as colunas são preenchidas:
 INSERT INTO nome_da_tabela VALUES (valorAtributo1, valorAtributo2, valorAtributo3);
 
-... definda quais colunas serão preenchidas:
+-- definda quais colunas serão preenchidas:
 INSERT INTO nome_da_tabela(nomeAtributo1, nomeAtributo2) VALUES (valorAtributo1, valorAtributo2);
 
-... inserção de várias tublas:
+-- inserção de várias tublas:
 INSERT INTO nome_da_tabela(nomeAtributo1, nomeAtributo2) 
 VALUES 
   (valorAtributo1, valorAtributo2),
@@ -88,7 +85,6 @@ VALUES
 ```
 
 ## Consulta de dados
-
 SELECT, FROM e  WHERE são comandos de projeção e seleção, para verificação dos elementos inseridos na tabela.
 
 Exemplos:
@@ -99,20 +95,18 @@ SELECT nome, endereço FROM empregado WHERE salario > 1500;
 ```
 
 ## Remoção de dados
-
 O comando DELETE é utilizado para remover dados de uma tabela.
 
 Exemplo:
 ```sql
-... remove todas as tuplas:
+-- remove todas as tuplas:
 DELETE FROM nome_da_tabel;
 
-... remoção de tuplas que saisfazem a condição:
+-- remoção de tuplas que saisfazem a condição:
 DELETE FROM tasks WHERE status = "DONE";
 ```
 
 ## Atualização de dados
-
 O coando UPDATE atualiza dados em uma tabela.
 
 Exemplos:
@@ -126,7 +120,6 @@ WHERE cidade_lotacao = 'Campina Grande' AND ultima_avaliacao = 'OTIMA';
 ```
 
 ## Restrições de CHECK constraints
-
 CHECK é utilizado para restringir valores de uma coluna.
 
 Exemplos:
@@ -147,7 +140,6 @@ ALTER TABLE produto ADD CONSTRAINT produto_chk_preco_valido CHECK (preco > 0);
 ```
 
 ## UNIQUE
-
 UNIQUE garante que não haverá valores iguais em uma mesma coluna.
 
 Exemplos:
@@ -172,3 +164,21 @@ CREATE TABLE pessoa (
   UNIQUE (a, c)
 );
 ```
+
+## EXCLUDE
+
+EXCLUDE cria exceções generalizadas, acessando todas as tuplas da tabela.
+
+Exemplo:
+```sql
+-- Exemplo, não permitir que existam dois aluguéis para um mesmo veículo (mesmo id de veículo em uma tabela aluguel) se os períodos de locação tiverem interseção entre si.
+-- verifica o id_veiculo com o operador "=" e o período de locação (do tipo intervalo de tempo) com o operador de interseção "&&".
+
+ALTER TABLE locacao
+ADD CONSTRAINT locacao_excl
+EXCLUDE USING gist (
+  id_veiculo WITH =,
+  periodo WITH &&
+);
+```
+
