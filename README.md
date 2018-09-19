@@ -125,3 +125,23 @@ UPDATE funcionario SET salario = salario+200, gratificacao = gratificacao+100
 WHERE cidade_lotacao = 'Campina Grande' AND ultima_avaliacao = 'OTIMA';
 ```
 
+## Restrições de CHECK constraints
+
+CHECK é utilizado para restringir valores de uma coluna.
+
+Exemplos:
+```sql
+CREATE TABLE produto (
+  id_produto integer,
+  preco numeric,
+  CHECK (preco > 0)
+);
+
+CREATE TABLE produto (
+  id_produto integer,
+  preco numeric,
+  CONSTRAINT preco_validochk CHECK (preco > 0)
+);
+
+ALTER TABLE produto ADD CONSTRAINT produto_chk_preco_valido CHECK (preco > 0);
+```
