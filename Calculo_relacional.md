@@ -14,3 +14,15 @@ Uma expressão é especificada em termos de variáveis que variam sobre:
 * Tuplas (no cálculo relacionald de tuplas).
 * Valores dos atributos (no cálculo do domínio).
 
+Em uma expressão, não há ordem de operações:
+* Expressão especifica apenas o que o resultado deve conter.
+* Esta é a principal diferença para a álgebra relacional.
+
+Considerada não procedimental (considerada declarativa):
+* Na álgebra relacional, nós precisamos especificar uma sequência de operações. A álgebra é considerada procedimental.
+
+O poder expressivo das linguagens é idêntico.
+
+Uma linguagem L é relacionalmente completa se pudermos expressar em L qualquer consulta que puder ser expressada em cálculo relacional:
+* A maioria das linguagens de consulta relacional é relacionalmente completa.
+* Porém, estas linguagens são mais expressivas que a álgebra e o cálculo relacional (devido às operações adicionais que são frequentemente necessárias).
