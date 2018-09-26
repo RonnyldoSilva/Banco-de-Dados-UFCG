@@ -48,3 +48,5 @@ Exemplo: localize os nomes e sobrenomes de todos os empregados cujo o salário �
 Uma tupla t é ligada se aparece em uma cláusula existencial ou universal. Caso contrário, ela é livre.
 
 Exemplo: recupere o nome e endereço de todos os funcionários que trabalham para o departamento de pesquisa (Research).
+
+<img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/formula_com_quantificadores.PNG">
