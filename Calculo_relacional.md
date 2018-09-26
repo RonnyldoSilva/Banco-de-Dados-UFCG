@@ -40,3 +40,9 @@ Uma simples consulta do cálculo relacioanl de tupla é da forma:
 Exemplo: Localize os nomes e sobrenomes de todos os empregados cujo o salário é acima de R$ 5.000.
 
 <img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/calculo_Relacional_exp.png">
+
+ Quantificadores: Existencial e Universal
+ 
+ <img src="">
+ 
+ Uma tupla t é ligada se aparece em uma cláusula existencial ou universal. Caso contrário, ela é livre.
