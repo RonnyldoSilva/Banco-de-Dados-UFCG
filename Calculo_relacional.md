@@ -37,12 +37,14 @@ Uma simples consulta do cálculo relacioanl de tupla é da forma:
 * COND(t) é uma expressão condicional que envolve t.
 * O resultado é um conjunto de tuplas que satisfazem COND(t).
 
-Exemplo: Localize os nomes e sobrenomes de todos os empregados cujo o salário é acima de R$ 5.000.
+Exemplo: localize os nomes e sobrenomes de todos os empregados cujo o salário é acima de R$ 5.000.
 
 <img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/calculo_Relacional_exp.png">
 
- Quantificadores: Existencial e Universal
+## Quantificadores: Existencial e Universal
  
- <img src="">
+<img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/Existencial_e_universal.PNG">
  
- Uma tupla t é ligada se aparece em uma cláusula existencial ou universal. Caso contrário, ela é livre.
+Uma tupla t é ligada se aparece em uma cláusula existencial ou universal. Caso contrário, ela é livre.
+
+Exemplo: recupere o nome e endereço de todos os funcionários que trabalham para o departamento de pesquisa (Research).
