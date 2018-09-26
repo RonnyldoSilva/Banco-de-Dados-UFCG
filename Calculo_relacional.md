@@ -38,3 +38,5 @@ Uma simples consulta do cálculo relacioanl de tupla é da forma:
 * O resultado é um conjunto de tuplas que satisfazem COND(t).
 
 Exemplo: Localize os nomes e sobrenomes de todos os empregados cujo o salário é acima de R$ 5.000.
+
+<img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/calculo_Relacional_exp.png">
