@@ -26,3 +26,15 @@ O poder expressivo das linguagens é idêntico.
 Uma linguagem L é relacionalmente completa se pudermos expressar em L qualquer consulta que puder ser expressada em cálculo relacional:
 * A maioria das linguagens de consulta relacional é relacionalmente completa.
 * Porém, estas linguagens são mais expressivas que a álgebra e o cálculo relacional (devido às operações adicionais que são frequentemente necessárias).
+
+## Cálculo Relacional de Tupla
+
+Uma simples consulta do cálculo relacioanl de tupla é da forma:
+
+### {t | COND(t)}
+
+* t é uma variável de tupla.
+* COND(t) é uma expressão condicional que envolve t.
+* O resultado é um conjunto de tuplas que satisfazem COND(t).
+
+Exemplo: Localize os nomes e sobrenomes de todos os empregados cujo o salário é acima de R$ 5.000.
