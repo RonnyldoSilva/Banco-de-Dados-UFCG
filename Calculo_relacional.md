@@ -37,9 +37,16 @@ Uma simples consulta do cálculo relacioanl de tupla é da forma:
 * COND(t) é uma expressão condicional que envolve t.
 * O resultado é um conjunto de tuplas que satisfazem COND(t).
 
-Exemplo: localize os nomes e sobrenomes de todos os empregados cujo o salário é acima de R$ 5.000.
+Exemplo: localize os nomes e sobrenomes de todos os empregados cujo o salário é acima de R$ 50.000.
 
 <img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/calculo_Relacional_exp.png">
+
+Equivalente a consulta SQL:
+```sql
+SELECT t.nome, t.sobrenome
+FROM EMPLOYEE t
+WHERE t.salario>50000
+```
 
 ## Quantificadores: Existencial e Universal
  
