@@ -19,7 +19,8 @@ CREATE SCHEMA COMPANY AUTHORIZATION 'jSMETH';
 
 Exemplo:
 ```sql
-CREATE TABLEM EMPLOYEE
+-- 1ª opção de criação de tabela.
+CREATE TABLE EMPLOYEE
 -- Opcionalmente, pode-se especificar o esquema.
 CREATE TABLE COMPAMY.EMPLOYEE
 ```
