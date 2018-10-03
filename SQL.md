@@ -102,4 +102,9 @@ WHERE Fname='John' AND Minit='B' AND Lname='Smith';
 SELECT Fname, Lname, Address
 FROM EMPLOYEE, DEPARTMENT
 WHERE Dname='Research' AND Dnumber='Dno';
+
+-- O mesmo nome pode ser usado para atribuitos de duas (ou mais) relações diferente.
+SELECT Fname, Address.
+FROM EMPLOYEE, DEPARTMENT
+WHERE DEPARTMENT.Dnumber = EMPLOYEE.Dnumber;
 ```
