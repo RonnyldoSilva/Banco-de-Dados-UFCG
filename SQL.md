@@ -126,3 +126,22 @@ FROM EMPLOYEE;
 SELECT DISTINCT Salary
 FROM EMPLOYEE;
 ```
+
+Inserção de várias tuplas a partir do resultado de uma consulta:
+```sql
+INSERT INTO WORKS_ON_INFO (name, name-pro, hours)
+SELECT E.Lname, P.Pname, W.Hours
+FROM PROJECT P, WORKS_ON W, EMPLOYEE E
+WHERE P.Pnumber = W.Pno AND W.Essn=E.Ssn;
+```
+
+Inserção em massa em uma nova tabela:
+```sql
+CREATE TABLE D5EMPS LIKE EMPLOYEE
+(
+ SELECT E.*
+ FROM EMPLOYEE AS E
+ WHERE E.Dno = 5;
+)
+WITH DATA;
+```
