@@ -108,3 +108,12 @@ SELECT Fname, Address.
 FROM EMPLOYEE, DEPARTMENT
 WHERE DEPARTMENT.Dnumber = EMPLOYEE.Dnumber;
 ```
+### Alias / Variáveis de Tupla
+
+Utilizadas para evitar ambiguidade quando a mesma relação é utilizada mais de uma vez na consulta.
+```sql
+Para cada funcionário, recuperar o primeiro e último nome do funcionário, assim como o do seu supervisor.
+SELECT E.Fname, ELname, S.Fname, S.Lname
+FROM EMPLOYEE AS E, EMPLOYEE AS S
+WHERE E.Super_ssn=S.Ssn;
+```
