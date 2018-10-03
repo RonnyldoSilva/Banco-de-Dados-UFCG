@@ -117,3 +117,12 @@ SELECT E.Fname, ELname, S.Fname, S.Lname
 FROM EMPLOYEE AS E, EMPLOYEE AS S
 WHERE E.Super_ssn=S.Ssn;
 ```
+
+Usa-se a palavra DISTINCT na cláusula SELECT para remover as duplicatas.
+```sql
+SELECT ALL Salary
+FROM EMPLOYEE;
+
+SELECT DISTINCT Salary
+FROM EMPLOYEE;
+```
