@@ -29,3 +29,32 @@ FROM EMPLOYEE
 WHERE Super_ssn IS NULL;
 ```
 
+Consultas aninhadas ultizando IN.
+```slq
+SELECT DISTINCT Pnumber
+FROM PROJECT
+WHERE Pnumber IN
+  (
+  SELECT
+  FROM
+  WHERE
+  )
+  OR
+  (
+  SELECT
+  FROM
+  WHERE
+  );
+```
+
+ALL:
+```sql
+SELECT Lname, Fname
+FROM EMNPLOYEE
+WHERE Salary > ALL
+  (
+  SELECT
+  FROM
+  WHERE
+  );
+```
