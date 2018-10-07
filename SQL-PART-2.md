@@ -3,12 +3,12 @@
 DROP é usado para remover esquemas, tabelas, domínios e restrições.
 
 Opções CASCADE e RESTRICT.
-```slq
+```sql
 DROP SCHEMA COMPANY CASCADE;
 ```
 
 ALTER TABLE, remove, altera ou adiciona colnas e aciciona ou remove constraints.
-```slq
+```sql
 ALTER TABLE COMPANY.EMPLOYEE
 DROP CONSTRAINT EMPSUPERFK CASCADE;
 ```
@@ -30,7 +30,7 @@ WHERE Super_ssn IS NULL;
 ```
 
 Consultas aninhadas ultizando IN.
-```slq
+```sql
 SELECT DISTINCT Pnumber
 FROM PROJECT
 WHERE Pnumber IN
