@@ -1,9 +1,13 @@
 SQL - Consultas.
 
 Criando o Esquema Company
-
 ```sql
 CREATE SCHEMA company;
+```
+
+Remoção de tabelas e esquemas:
+```sql
+ DROP OWNED BY CURRENT_USER;
 ```
 
 Search_path evita o uso de qualificadores, estes apenas utilizados caso exita pelo menos dois esquemas com mesmo nome.
