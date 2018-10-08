@@ -77,3 +77,7 @@ WHERE EXISTS
   );
    
 ```
+
+JOIN junta duas ou mais tabelas.
+
+NATURAL JOIN renomeia atributos para poder juntar as tabelas.
