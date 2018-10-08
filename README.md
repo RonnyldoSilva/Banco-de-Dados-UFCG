@@ -13,6 +13,11 @@ Acesso explicito ao banco de dados:
 psql -d ronnyldo_db
 ```
 
+## Cópia de arquivos via SSH:
+```shell
+scp -P 45600 caminhoDoArquivo seuUsuario@150.165.85.37/home/seuUsuario
+```
+
 ## SQL/DLL comando básicos
 Princípais comandos:
 ```sql
