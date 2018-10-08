@@ -58,3 +58,22 @@ WHERE Salary > ALL
   WHERE
   );
 ```
+
+EXISTS
+```sql
+SELECT Fname, Lname
+FROM EMPLOYEE
+WHERE EXISTS
+  (
+  SELECT *
+  FROM DEPARTMENT
+  WHERE Ssn = Essn
+  )
+  AND EXISTS
+  (
+  SELECT *
+  FROM DEPARTMENT
+  WHERE Ssn = Mgr_Ssn
+  );
+   
+```
