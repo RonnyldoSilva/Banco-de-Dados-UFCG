@@ -10,7 +10,7 @@ Search_path evita o uso de qualificadores, estes apenas utilizados caso exita pe
 
 Adicionado um novo esquema no search_path:
 ```sql
-SET search_path TO company;
+SET search_path TO company,public;
 
 -- Veja o seu esquema no search_path:
 SHOW search_path;
