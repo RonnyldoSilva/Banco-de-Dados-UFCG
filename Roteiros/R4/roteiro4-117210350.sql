@@ -53,3 +53,8 @@ FROM department AS D, dept_locations AS L
 WHERE D.dnumber = L.dnumber AND LEFT(L.dlocation, 1) = 'S';
 
 --Q13
+SELECT E.fname, E.lname, D.dependent_name 
+FROM employee AS E, dependent AS D 
+WHERE ssn = essn;
+
+--Q14
