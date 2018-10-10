@@ -58,3 +58,13 @@ FROM employee AS E, dependent AS D
 WHERE ssn = essn;
 
 --Q14
+SELECT E.fname || E.minit || E.lname AS full_name, E.salary 
+FROM employee AS E 
+WHERE E.salary > 50000;
+
+--Q15
+SELECT P.pname, D.dname 
+FROM project AS P, department AS D 
+WHERE P.dnum = D.dnumber;
+
+--Q16
