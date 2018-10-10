@@ -1,0 +1,269 @@
+Banco de Dados 1
+SQL - Consultas - Parte 1
+
+Neste roteiro, continuaremos trabalhando com a linguagem SQL, elaborando consultas mais complexas, envolvendo â€œquantificadoresâ€, consultas aninhadas, agrupamento, agregaÃ§Ã£o, etc.
+
+Trabalharemos mais uma vez com o esquema COMPANY.
+
+Executando Consultas
+
+Ao final, vocÃª deve enviar um arquivo nomeado roteiro5-matricula.sql com cada consulta em uma linha. Cada consulta deve ser acompanhada de um comentÃ¡rio indicando o nÃºmero da questÃ£o. Exemplo:
+
+--Q1
+SELECT * FROM department
+
+--Q2
+SELECT * FROM dept_locations;
+
+O arquivo enviado deve corresponder a um cÃ³digo SQL completo! Ou seja, sÃ³ devem existir comandos sem erro de sintaxe e comentÃ¡rios apropriados (precedidos de --).
+
+Tente fazer ao mÃ¡ximo sozinho. Evite perguntar aos colegas antes de tentar bastante. Verifique as mensagens de erro do PostgreSQL, elas normalmente sÃ£o muito Ãºteis para os casos de erro de sintaxe.
+
+NÃƒO utilize o comando LIMIT do PostgreSQL nas consultas.
+
+1. Retornar quantas funcionÃ¡rias estÃ£o cadastradas.
+
+ count
+-------
+    11
+(1 row)
+
+2. Retornar a mÃ©dia de salÃ¡rio dos funcionÃ¡rios homens que moram no estado do Texas (TX);
+
+        avg         
+--------------------
+ 35714.285714285714
+(1 row)
+
+
+
+
+3. Retornar os ssn dos supervisores e a quantidade de funcionÃ¡rios que cada um deles supervisiona (contar tambÃ©m os que nÃ£o sÃ£o supervisionados por ninguÃ©m - veja a Ãºltima linha do resultado mostrado abaixo). Ordenar o resultado pela quantidade.
+
+ ssn_supervisor | qtd_supervisionados
+----------------+---------------------
+ 333333300      |                   1
+ 666666612      |                   1
+ 666666607      |                   1
+ 666666601      |                   1
+ 666666604      |                   1
+ 555555500      |                   1
+ 666666610      |                   1
+ 666666611      |                   1
+ 888665555      |                   2
+ 666666600      |                   2
+ 222222201      |                   2
+ 987654321      |                   2
+ 666666603      |                   2
+ 666666602      |                   3
+ 111111100      |                   3
+ 333445555      |                   3
+ 444444400      |                   3
+ 222222200      |                   3
+                |                   7
+
+(19 rows)
+
+4. Para cada funcionÃ¡rio que supervisiona alguÃ©m, retornar seu nome e a quantidade de funcionÃ¡rios que supervisiona. O resultado deve ser ordenado pela quantidade de funcionÃ¡rios supervisionados. A consulta NÃƒO deve conter uma clÃ¡usula WHERE.
+
+ nome_supervisor | qtd_supervisionados
+-----------------+---------------------
+ Jill            |                   1
+ Carl            |                   1
+ John            |                   1
+ Billie          |                   1
+ Gerald          |                   1
+ Kim             |                   1
+ Naveen          |                   1
+ Sammy           |                   1
+ Jennifer        |                   2
+ Bob             |                   2
+ Josh            |                   2
+ Lyle            |                   2
+ James           |                   2
+ Alex            |                   3
+ Jared           |                   3
+ Evan            |                   3
+ Kate            |                   3
+ Franklin        |                   3
+(18 rows)
+
+5. FaÃ§a uma consulta equivalente Ã  anterior, porÃ©m considerando os funcionÃ¡rios que nÃ£o possuem supervisor (note que o resultado possui uma linha a mais do que o resultado da quest}ao anterior). Esta consulta tambÃ©m NÃƒO deve conter clÃ¡usula WHERE.
+
+ nome_supervisor | qtd_supervisionados
+-----------------+---------------------
+ Jill            |                   1
+ Kim             |                   1
+ Gerald          |                   1
+ Carl            |                   1
+ Billie          |                   1
+ John            |                   1
+ Naveen          |                   1
+ Sammy           |                   1
+ Lyle            |                   2
+ Josh            |                   2
+ James           |                   2
+ Bob             |                   2
+ Jennifer        |                   2
+ Kate            |                   3
+ Jared           |                   3
+ Evan            |                   3
+ Alex            |                   3
+ Franklin        |                   3
+                 |                   7
+(19 rows)
+
+6. Retornar a quantidade de funcionÃ¡rios que trabalham no(s) projeto(s) que contÃ©m menos funcionÃ¡rios.
+
+ qtd
+-----
+   2
+(1 row)
+
+7. FaÃ§a uma consulta equivalente Ã  anterior, porÃ©m, retorne tambÃ©m o nÃºmero do projeto. HÃ¡ outras consultas mais fÃ¡ceis abaixo, portanto, caso prefira, deixe esta para depois. PorÃ©m, o interessante em fazer esta questÃ£o agora Ã© que ela mistura conceitos explorados nas questÃµes anteriores (3 a 6), acrescida de um pequeno detalhe.
+
+ num_projeto | qtd_func
+-------------+----------
+           1 |        2
+           3 |        2
+
+8. Retornar a mÃ©dia salarial por projeto. 
+
+ num_proj |        media_sal         
+-----+--------------------
+  30 | 31000.000000000000
+  62 | 54250.000000000000
+  92 | 61500.000000000000
+  20 | 46000.000000000000
+   1 | 27500.000000000000
+  91 | 53312.500000000000
+   3 | 39000.000000000000
+  61 | 42166.666666666667
+  10 | 30000.000000000000
+  63 | 47125.000000000000
+   2 | 31666.666666666667
+(11 rows)
+
+9. Altere a consulta anterior para retornar tambÃ©m os nomes dos projetos.
+
+ proj_num |    proj_nome     |     media_sal      
+----------+------------------+--------------------
+    1 | ProductX         | 27500.000000000000
+  10 | Computerization  | 30000.000000000000
+   30 | Newbenefits      | 31000.000000000000
+    2 | ProductY         | 31666.666666666667
+    3 | ProductZ         | 39000.000000000000
+   61 | OperatingSystems | 42166.666666666667
+   20 | Reorganization   | 46000.000000000000
+   63 | Middleware       | 47125.000000000000
+   91 | InkjetPrinters   | 53312.500000000000
+   62 | DatabaseSystems  | 54250.000000000000
+   92 | LaserPrinters    | 61500.000000000000
+(11 rows)
+
+
+10. Observe que o projeto 92 tem a maior mÃ©dia salarial. FaÃ§a uma consulta para retornar os funcionÃ¡rios que nÃ£o trabalham neste projeto mas que possuam salÃ¡rio maior do que todos os funcionÃ¡rios que trabalham neste projeto. Basta retornar o primeiro nome e o salÃ¡rio destes funcionÃ¡rios. O nÃºmero 92 pode aparecer na consulta.
+
+ fname |  salary  
+-------+----------
+ Jared | 85000.00
+ Alex  | 89000.00
+ Evan  | 92000.00
+ Bob   | 96000.00
+(4 rows)
+
+11. Retornar a quantidade de projetos por funcionÃ¡rio, ordenando pela quantidade. 
+
+ssn    | qtd_proj
+-----------+-------
+ 666666600 |     0
+ 666666602 |     0
+ 666666612 |     1
+ 666666601 |     1
+ 111111100 |     1
+ 111111101 |     1
+ 666666608 |     1
+ 111111103 |     1
+ 666666610 |     1
+ 444444403 |     1
+ 666884444 |     1
+ 444444401 |     1
+ 111111102 |     1
+ 666666604 |     1
+ 888665555 |     1
+ 666666605 |     1
+ 666666611 |     1
+ 222222203 |     1
+ 333333300 |     1
+ 222222201 |     1
+ 222222204 |     1
+ 666666606 |     1
+ 444444402 |     1
+ 444444400 |     1
+ 666666607 |     1
+ 222222205 |     1
+ 333333301 |     1
+ 222222200 |     1
+ 222222202 |     1
+ 555555500 |     1
+ 555555501 |     1
+ 666666603 |     1
+ 666666609 |     1
+ 123456789 |     2
+ 987987987 |     2
+ 453453453 |     2
+ 987654321 |     2
+ 999887777 |     2
+ 666666613 |     3
+ 333445555 |     4
+(40 rows)
+
+12. Retornar a quantidade de funcionÃ¡rios por projeto (incluindo os funcionÃ¡rios â€œsem projetoâ€). Retornar apenas os projetos que possuem menos de 5 funcionÃ¡rios. Ordenar pela quantidade.
+
+ num_proj | qtd_func
+----------+----------
+        |        2
+   30 |        3
+   92 |        3
+   20 |        3
+     1 |        2
+     3 |        2
+   10 |        3
+   63 |        4
+     2 |        3
+(9 rows)
+
+
+13. Usando consultas aninhadas e sem usar junÃ§Ãµes, formule uma consulta para retornar os primeiros nomes dos funcionÃ¡rios que trabalham no(s) projeto(s) localizado(s) em Sugarland e que possuem dependentes.
+
+  fname   
+----------
+ Franklin
+ John
+(2 rows)
+
+14. Sem usar IN e sem usar nenhum tipo de junÃ§Ã£o (nem mesmo as junÃ§Ãµes feitas com produto cartesiano + filtragem usando clÃ¡usula WHERE), formule uma consulta para retornar o(s) departamentos que nÃ£o possuem projetos. NÃ£o Ã© proibido que a consulta contenha uma clÃ¡usula WHERE.
+
+ dname
+-------
+ Sales
+(1 row)
+
+15. Retornar o primeiro e o Ãºltimo nome do(s) funcionÃ¡rio(s) que trabalham em todos os projetos em que trabalha o funcionÃ¡rio com ssn 123456789.
+
+ fname |  lname  
+-------+---------
+ Joyce | English
+(1 row)
+
+
+
+
+*** APENAS PARA OS INCANSÃVEIS: ***
+
+16. Reescreva a questÃ£o 10 sem utilizar o cÃ³digo 92 explicitamente. Neste caso, a consulta fica genÃ©rica para identificar o cÃ³digo do projeto com maior mÃ©dia salarial. PorÃ©m, observe que pode haver um empate (embora nÃ£o haja neste estado atual do banco de dados).
+
+17. ...
+
+18. ...
+
