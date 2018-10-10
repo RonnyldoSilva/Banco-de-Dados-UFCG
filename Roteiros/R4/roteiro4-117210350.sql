@@ -78,3 +78,6 @@ FROM project AS P, employee AS E
 WHERE P.dnum = E.dno;
 
 --Q18
+SELECT E.fname, D.dependent_name, D.relationship 
+FROM project AS P, employee AS E, dependent AS D 
+WHERE P.pnumber = 91 AND P.dnum = E.dno AND E.ssn = D.essn;
