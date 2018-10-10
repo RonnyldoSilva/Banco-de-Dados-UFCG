@@ -73,3 +73,8 @@ FROM project AS P, department AS D, employee AS E
 WHERE P.pnumber > 30 AND E.ssn = D.mgrssn AND P.dnum = D.dnumber;
 
 --Q17
+SELECT P.pname, E.fname 
+FROM project AS P, employee AS E 
+WHERE P.dnum = E.dno;
+
+--Q18
