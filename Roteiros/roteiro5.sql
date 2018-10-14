@@ -7,3 +7,9 @@ WHERE e.sex = 'F';
 SELECT AVG(e.salary) 
 FROM employee AS e 
 WHERE e.sex = 'M' AND RIGHT(e.address, 2) = 'TX';
+
+--Q3
+SELECT e.superssn, count(*) 
+FROM employee AS e 
+GROUP BY e.superssn 
+ORDER BY count(*);
