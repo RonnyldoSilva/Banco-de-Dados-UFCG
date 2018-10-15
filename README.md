@@ -56,7 +56,7 @@ CREATE TABLE tabela(
 Exemplo de ALTER TABLE:
 ```sql
 ALTER TABLE nome_atual_da_tabela RENAME TO nome_novo;
-ALTER TABLE nome_tabela ADD COLUMN noe_atributo charvar(30);
+ALTER TABLE nome_tabela ADD COLUMN nome_atributo charvar(30);
 ```
 
 Definição de comportamentos para FOREIGN KEYs do comando DELETE e UPDATE:
