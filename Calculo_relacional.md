@@ -6,12 +6,12 @@ O cálculo relacional é importante por 2 motivos:
 
 Uma expessão de cálculo relacional cria uma nova relação.
 
-No cáloculo relacional:
+No cálculo relacional:
 * Existem variáveis, constantes, operadores lógicos de comparação e quantificadores.
-* Uma tupla de respostas é essencialmente uma atribuição de constantes às variáveis que levam uma fórmula (condições) a um estado verdadeiro.
+* Uma tupla de resposta é essencialmente uma atribuição de constantes às variáveis que levam uma fórmula (condições) a um estado verdadeiro.
 
 Uma expressão é especificada em termos de variáveis que variam sobre:
-* Tuplas (no cálculo relacionald de tuplas).
+* Tuplas (no cálculo relacional de tuplas).
 * Valores dos atributos (no cálculo do domínio).
 
 Em uma expressão, não há ordem de operações:
