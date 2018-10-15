@@ -107,7 +107,7 @@ O comando DELETE é utilizado para remover dados de uma tabela.
 Exemplo:
 ```sql
 -- remove todas as tuplas:
-DELETE FROM nome_da_tabel;
+DELETE FROM nome_da_tabela;
 
 -- remoção de tuplas que saisfazem a condição:
 DELETE FROM tasks WHERE status = "DONE";
