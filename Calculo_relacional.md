@@ -2,7 +2,7 @@
 
 O cálculo relacional é importante por 2 motivos:
 * Tem uma base firme na lógica matemática.
-* A linguagem de consulta padrão dpara SGBDs (SQL) tem alguns dos seus alicerces no cálculo relacional de tuplas.
+* A linguagem de consulta padrão para SGBDs (SQL) tem alguns dos seus alicerces no cálculo relacional de tuplas.
 
 Uma expessão de cálculo relacional cria uma nova relação.
 
