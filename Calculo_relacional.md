@@ -29,7 +29,7 @@ Uma linguagem L é relacionalmente completa se pudermos expressar em L qualquer 
 
 ## Cálculo Relacional de Tupla
 
-Uma simples consulta do cálculo relacioanl de tupla é da forma:
+Uma simples consulta do cálculo relacional de tupla é da forma:
 
 ### {t | COND(t)}
 
