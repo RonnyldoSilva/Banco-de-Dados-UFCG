@@ -114,7 +114,7 @@ DELETE FROM tasks WHERE status = "DONE";
 ```
 
 ## Atualização de dados
-O coando UPDATE atualiza dados em uma tabela.
+O comando UPDATE atualiza dados em uma tabela.
 
 Exemplos:
 ```sql
