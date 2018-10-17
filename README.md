@@ -26,7 +26,7 @@ DROP TABLE - deleta tabela;
 ALTER TABLE - altera tabela;
 ```
 
-Constraints:
+Constraints, que são restrições que devem ser obedecidas pelas tabelas:
 ```sql
 PRIMARY KEY
 FOREIGN KEY
