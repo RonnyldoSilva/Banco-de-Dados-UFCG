@@ -58,3 +58,15 @@ Onde P(V) indica o conjunto potência (todos os possíveis subconjuntos) de V.
 ## Exemplo: Entidade CAR
 
 <img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/EntidadeCar.png">
+
+## Refinando o design: relacionamentos
+
+O design inicial não está completo.
+
+Alguns requisitos devem ser representados através de relacionamentos.
+
+O modelo ER possui 3 princípais conceitos:
+* Entidade (com tipos de entidades e conjuntos de entidades)
+* Atributos (simples, composto, multivalorado)
+* Relacionamento (com tipos de relacionamentos e conjuntos de relacionamentos)
+
