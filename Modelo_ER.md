@@ -73,7 +73,7 @@ O modelo ER possui 3 princípais conceitos:
 ## Relacionamentos
 
 Um relacionamento relaciona duas ou mais entidades:
-* Ex: EMPLOY John Smith *works on* the ProductX PROJECT.
+* Ex: EMPLOYEE John Smith *works on* the ProductX PROJECT.
 * EX: EMPLOYEE Franklin Wong *manages* the Research DEPARTMENT.
 
 Relacionamentos que relacionam entidades de mesmo tipos são agrupados e chamados de um tipo de relacionamento.
