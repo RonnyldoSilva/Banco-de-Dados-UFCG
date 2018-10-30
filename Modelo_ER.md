@@ -26,3 +26,14 @@ Chaves:
 * Atributos com a propriedade de unicidade.
 * Ex: SSN de EMPLOYEE.
 
+## Chaves
+
+Chave pode ser composta:
+* Placa (Estado, Numero).
+
+Uma entidade pode ter mais de uma chave:
+* Carro:
+** Renavan.
+** Placa.
+
+Cada chave é sublinhada (diferente do esquema relacional onde só a chave primária é sublinhada).
