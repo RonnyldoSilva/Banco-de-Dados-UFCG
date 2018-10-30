@@ -15,3 +15,14 @@
 * Multi-valorados: cor de uma roupa, representado por {Cor}.
 * Composto e multi-valorado: {FormaçãoAnterior(escola, ano, série, área)}
 
+## Tipos de entidades e atributos-chave
+
+Tipos de Entidades:
+* Correspondem a um mesmo tipo de objeto do mini-mundo.
+* Possuem mesmo conjunto de atributos.
+* Ex: EMPLOYEE e PROJECT.
+
+Chaves:
+* Atributos com a propriedade de unicidade.
+* Ex: SSN de EMPLOYEE.
+
