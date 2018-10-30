@@ -32,8 +32,25 @@ Chave pode ser composta:
 * Placa (Estado, Numero).
 
 Uma entidade pode ter mais de uma chave:
-* Carro:
-> Renavan.
-> Placa.
+* Carro: Renavan, Placa.
 
 Cada chave é sublinhada (diferente do esquema relacional onde só a chave primária é sublinhada).
+
+## Conjunto de Entidades
+
+Cada tipo de entidade terá uma coleção de entidades armazenada no banco de dados:
+* Chamado de conjunto de entidades ou coleção de entidades;
+* O mesmo nome pode ser usado para referir ao tipo de netidade ou ao conjunto de entidades;
+* Conjunto de entidades representa o estado atual de um banco de dados.
+
+## Domínios de atributos
+
+Cada atributo simples é associado a um conjunto valor:
+* Ex: Lastname: string de comprimento até 15 caracteres.
+Um conjunto valor especifica o conjunto de valores associado a um atributo.
+
+Matematicamente, defini-se um atributo A de uma entidade E cujo conjunto valor é V como uma função:
+
+A : E → P(V)
+
+Onde P(V) indica o conjunto potência (todos os possíveis subconjuntos) de V.
