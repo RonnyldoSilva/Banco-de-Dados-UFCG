@@ -70,3 +70,16 @@ O modelo ER possui 3 princípais conceitos:
 * Atributos (simples, composto, multivalorado)
 * Relacionamento (com tipos de relacionamentos e conjuntos de relacionamentos)
 
+## Relacionamentos
+
+Um relacionamento relaciona duas ou mais entidades:
+* Ex: EMPLOY John Smith *works on* the ProductX PROJECT.
+* EX: EMPLOYEE Franklin Wong *manages* the Research DEPARTMENT.
+
+Relacionamentos que relacionam entidades de mesmo tipos são agrupados e chamados de um tipo de relacionamento.
+* WORKS_ON: onde EMPLOYEEs e PROJECTs participam;
+* Ex: MANAGES: onde EMPLOYEEs e DEPARTMENTs participam.
+
+Grau de um relacionamento: número de entidades partticipantes:
+* MANAGES e WORKS_ON são relacionamentos binários.
+
