@@ -33,7 +33,7 @@ Chave pode ser composta:
 
 Uma entidade pode ter mais de uma chave:
 * Carro:
-*   Renavan.
-*   Placa.
+> Renavan.
+> Placa.
 
 Cada chave é sublinhada (diferente do esquema relacional onde só a chave primária é sublinhada).
