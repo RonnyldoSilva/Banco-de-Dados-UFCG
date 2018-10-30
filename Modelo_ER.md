@@ -54,3 +54,7 @@ Matematicamente, defini-se um atributo A de uma entidade E cujo conjunto valor �
 A : E → P(V)
 
 Onde P(V) indica o conjunto potência (todos os possíveis subconjuntos) de V.
+
+## Exemplo: Entidade CAR
+
+<img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/EntidadeCar.png">
