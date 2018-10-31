@@ -124,3 +124,15 @@ Razão de cardinalidade (específica a participação máxima):
 Dependências da existência (específica a participação mínima, também chamado de restrição de participação):
 * Zero (participação opcional, não dependente da existência).
 * Um ou mais (participação obrigatória, dependente da existência).
+
+## Relacionamento Recursivo
+
+Um tipo de relacionamento entre o mesmo tipo de entidade participante em papéis distintos.
+
+Também chamado de um tipo de relação de Também chamado de um tipo de relação de auto-referência.
+
+Ex: relacionamento SUPERVISION
+
+EMPLOYEE participa com dois papéis:
+* Supervisor (ou chefe)
+* Supervisionado (ou subordinado)
