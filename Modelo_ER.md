@@ -122,5 +122,5 @@ Razão de cardinalidade (específica a participação máxima):
 * Vários-para-vários (M:N).
 
 Dependências da existência (específica a participação mínima, também chamado de restrição de participação):
-* zero (participação opcional, não dependente da existência).
-um ou mais (participação obrigatória, dependente da existência).
+* Zero (participação opcional, não dependente da existência).
+* Um ou mais (participação obrigatória, dependente da existência).
