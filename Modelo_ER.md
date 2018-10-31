@@ -83,7 +83,7 @@ Relacionamentos que relacionam entidades de mesmo tipos são agrupados e chamado
 Grau de um relacionamento: número de entidades partticipantes:
 * MANAGES e WORKS_ON são relacionamentos binários.
 
-#Tipos de Relacionamento VS Conjunto de Relacionamentos
+## Tipos de Relacionamento VS Conjunto de Relacionamentos
 
 Tipos de relacionamento:
 * Descrição esquemática do relacionamento.
@@ -93,3 +93,14 @@ Tipos de relacionamento:
 Conjunto de relacionamentos:
 * Atual conjunto de instâncias de relacionamentos existentes no BD.
 * Estado atual de um tipo de relacionamento.
+
+## Relacionamento do Esquema COMPANY
+
+Ao analisar os requisitos, os seguintes relacionamentos são identificados (todos binários / grau 2):
+* WORKS_ON (entre EMPLOYEE, DEPARTMENT)
+* MANGES (entre EMPLOYEE, DEPARTMENT)
+* CONTROLS (entre DEPARTMENT, PROJECT)
+* WORKS_ON (entre EMPLOYEE, PROJECT)
+* SUPERVISION (entre EMPLOYEE (como subordinado), EMPLOYEE (como supervisor))
+* DEPENDENTS_OF (EMPLOYEE, DEPARTMENT)
+
