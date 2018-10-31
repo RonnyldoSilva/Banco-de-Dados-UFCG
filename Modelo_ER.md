@@ -111,3 +111,16 @@ Ao analisar os requisitos, os seguintes relacionamentos são identificados (todo
 ## Diagrama ER
 
 <img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/Diagrama_ER.PNG">
+
+## Restrições em Relacionamentos
+
+Restrições (Constraints) em Relacionamentos:
+
+Razão de cardinalidade (específica a participação máxima):
+* Um-para-um (1:1).
+* Um-para-muitos (1:N) ou muitos-para-um (N:1).
+* Vários-para-vários (M:N).
+
+Dependências da existência (específica a participação mínima, também chamado de restrição de participação):
+* zero (participação opcional, não dependente da existência).
+um ou mais (participação obrigatória, dependente da existência).
