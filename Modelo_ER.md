@@ -77,9 +77,19 @@ Um relacionamento relaciona duas ou mais entidades:
 * EX: EMPLOYEE Franklin Wong *manages* the Research DEPARTMENT.
 
 Relacionamentos que relacionam entidades de mesmo tipos são agrupados e chamados de um tipo de relacionamento.
-* WORKS_ON: onde EMPLOYEEs e PROJECTs participam;
+* Ex: WORKS_ON: onde EMPLOYEEs e PROJECTs participam;
 * Ex: MANAGES: onde EMPLOYEEs e DEPARTMENTs participam.
 
 Grau de um relacionamento: número de entidades partticipantes:
 * MANAGES e WORKS_ON são relacionamentos binários.
 
+#Tipos de Relacionamento VS Conjunto de Relacionamentos
+
+Tipos de relacionamento:
+* Descrição esquemática do relacionamento.
+* Identifica o nome do relacionamento e as entidades participantes.
+* Também pode identificar certas constraints.
+
+Conjunto de relacionamentos:
+* Atual conjunto de instâncias de relacionamentos existentes no BD.
+* Estado atual de um tipo de relacionamento.
