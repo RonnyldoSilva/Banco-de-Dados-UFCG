@@ -107,3 +107,7 @@ Ao analisar os requisitos, os seguintes relacionamentos são identificados (todo
 ## Exemplo de relacionamento ternário
 
 <img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/Relacionamento_ternario.PNG">
+
+## Diagrama ER
+
+<img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/Diagrama_ER.PNG">
