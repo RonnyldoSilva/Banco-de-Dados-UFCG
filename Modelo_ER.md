@@ -104,3 +104,6 @@ Ao analisar os requisitos, os seguintes relacionamentos são identificados (todo
 * SUPERVISION (entre EMPLOYEE (como subordinado), EMPLOYEE (como supervisor))
 * DEPENDENTS_OF (EMPLOYEE, DEPARTMENT)
 
+## Exemplo de relacionamento ternário
+
+<img src="https://github.com/RonnyldoSilva/UFCG---Database-1/blob/master/Images/Relacionamento_ternario.PNG">
