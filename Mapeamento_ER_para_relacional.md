@@ -20,3 +20,7 @@ Algoritmo de mapeamento ER -> Relacional:
 * Passo 6: mapeamento de atributos multivalorados.
 * Passo 7: mapeamento de relacionamento N-ários.
 
+Mapeamento de construções do modelo EER para relações:
+* Passo 8: mapeamento de especialização e generealização.
+* Passo 9: mapeamento de tipos de união (categorias).
+
