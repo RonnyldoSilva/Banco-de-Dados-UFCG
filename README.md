@@ -179,6 +179,7 @@ EXCLUDE cria exceções generalizadas, acessando todas as tuplas da tabela.
 Exemplo:
 ```sql
 -- Exemplo, não permitir que existam dois aluguéis para um mesmo veículo (mesmo id de veículo em uma tabela aluguel) se os períodos de locação tiverem interseção entre si.
+
 -- verifica o id_veiculo com o operador "=" e o período de locação (do tipo intervalo de tempo) com o operador de interseção "&&".
 
 ALTER TABLE locacao
