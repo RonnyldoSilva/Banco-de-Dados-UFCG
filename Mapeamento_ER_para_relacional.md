@@ -32,3 +32,10 @@ Mapeamento de construções do modelo EER para relações:
 
 Exemplo: EMPLOYEE, DEPARTMENT e PROJECT
 
+## Passo 2: Mapeamento de Entidades Fracas.
+
+* Criar uma relação R e incluir todos os atributos simples da entidade fraca W.
+* Incluir como chaves estrangeiras em R as chaves primárias da relação proprietária.
+* Definir como chave estrangeiras em R os atributos que correspondem à chave parcial de W e à chave primária de E.
+
+Exemplo: DEPENDENT.
