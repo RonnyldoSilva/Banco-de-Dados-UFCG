@@ -24,3 +24,11 @@ Mapeamento de construções do modelo EER para relações:
 * Passo 8: mapeamento de especialização e generealização.
 * Passo 9: mapeamento de tipos de união (categorias).
 
+## Passo 1: Mapeamento de Entidades Regulares.
+
+* Para cada tipo de entidade regular (forte) E, criar uma relação R que inclua todos os atributos semples de E.
+* Escolher um dos atribuitos-chave de E como a chave primária para R.
+* Se a chave escolhida for composta, o conjjunto de atributos simples que formam esta chave formarão a chave primária de R.
+
+Exemplo: EMPLOYEE, DEPARTMENT e PROJECT
+
