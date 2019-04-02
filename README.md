@@ -3,7 +3,7 @@
 Esse repositório é utilizado para a disciplina de banco de dados, mas também pode ser usado para qualquer aplicação de SGBD PostgreSQL.
 
 ## Acesso ao VM e ao SGBD
-Acesso a VM:
+Acesso a VM, funciona tanto no cmd, quanto no terminal:
 ```shell
 ssh -o ServerAliveInterval=30 ronnyldo@150.165.85.37 -p 45600
 ```
