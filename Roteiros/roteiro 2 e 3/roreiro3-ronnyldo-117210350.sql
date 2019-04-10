@@ -1,7 +1,5 @@
-
-
 create table farmacia (
-tipo varchar(10) 
+	tipo varchar(10) 
 );
 
 -- 1 e 2
@@ -33,11 +31,40 @@ create table cliente (nome varchar(30), endereço varchar(30));
 -- 7 
 alter table cliente add constraint enderecos_validos check(endereço = 'residência' or endereço = 'trabalho' or  endereço = 'outro');
 
+-- 8
+create table medicamento (id int not null, receita_necessaria varchar(1));
+alter table medicamento add constraint id_unico unique(id);
+alter table medicamento add constraint receita_valida check(receita_necessaria =  'S' or receita_necessaria = 'N');
+
+-- 9
+create table entrega (id int not null, cliente_id int);
+alter table entrega add constraint unique_id_entrega unique(id);
+alter table cliente add column id int not null;
+alter table cliente add constraint id_unico_cliente unique(id);
+alter table entrega add foreign key (cliente_id) references cliente(id);
+
+-- 10
+create table venda(id int not null, cliente_id int);
+alter table venda add constraint id_unico_venda unique(id);
+
+
+-- 11
+alter table venda add column id_funcionario int;
+alter table venda add foreign key (id_funcionario) references funcionario(id);
+
+-- 12
+alter table venda add column id_medicamento int;
+alter table venda add foreign key (id_medicamento) references medicamento(id);
+
+-- 13
+
+
+-- 14
+alter table farmacia add constraint bairro_unico unique(bairro);
+
+-- 15
+
+
 -- 16 
 alter table farmacia add tipo_gerente varchar(30);
 alter table farmacia add constraint tipo_gerente_valido check(tipo_gerente = 'administrador' or tipo_gerente = 'farmaceutico');
-
-
-
-
-
