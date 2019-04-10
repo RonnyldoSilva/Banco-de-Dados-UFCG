@@ -1,3 +1,5 @@
+
+
 create table farmacia (
 	tipo varchar(10) 
 );
@@ -57,14 +59,36 @@ alter table venda add column id_medicamento int;
 alter table venda add foreign key (id_medicamento) references medicamento(id);
 
 -- 13
-
+-- Clientes cadastradis devem ser maiores de 18 anos;
 
 -- 14
 alter table farmacia add constraint bairro_unico unique(bairro);
 
 -- 15
-
+-- alter table farmacia add constraint apenas_uma_sede exclude using gist (tipo with =) where (tipo = 'sede');
 
 -- 16 
 alter table farmacia add tipo_gerente varchar(30);
 alter table farmacia add constraint tipo_gerente_valido check(tipo_gerente = 'administrador' or tipo_gerente = 'farmaceutico');
+
+-- 17
+-- use check(com cliente e medicamento sendo verificados);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
