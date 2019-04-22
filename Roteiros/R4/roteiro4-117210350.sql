@@ -60,7 +60,7 @@ FROM employee AS E, dependent AS D
 WHERE ssn = essn;
 
 --Q14
-SELECT E.fname || E.minit || E.lname AS full_name, E.salary 
+SELECT E.fname || ' ' || E.minit || ' ' || E.lname AS full_name, E.salary 
 FROM employee AS E 
 WHERE E.salary > 50000;
 
