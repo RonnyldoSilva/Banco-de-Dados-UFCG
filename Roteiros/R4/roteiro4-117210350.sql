@@ -51,6 +51,8 @@ WHERE D.dnumber = L.dnumber;
 SELECT D.dname 
 FROM department AS D, dept_locations AS L 
 WHERE D.dnumber = L.dnumber AND LEFT(L.dlocation, 1) = 'S';
+-- or
+select d.dname from department as d, dept_locations as l where d.dnumber = l.dnumber and l.dlocation like 'S%';
 
 --Q13
 SELECT E.fname, E.lname, D.dependent_name 
