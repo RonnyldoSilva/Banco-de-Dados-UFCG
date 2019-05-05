@@ -22,4 +22,10 @@ SELECT MIN(qtd) AS qtd FROM (SELECT count(*) AS qtd FROM works_on AS w GROUP BY 
 select pno, avg(salary) from (works_on as w join employee as e on (e.ssn = w.essn)) group by pno order by avg(salary);
 
 --Q9
-select * from ( project as p join (select pno as num_proj, avg(salary) as media_sal from (works_on as w join employee as e on (e.ssn = w.essn)) group by pno order by avg(salary)) as pms on (p.pnumber = pms.num_proj));
+select pnumber as proj_num, pname as proj_nome, media_sal 
+from ( project as p join (
+  select pno as num_proj, avg(salary) as media_sal 
+  from (works_on as w join employee as e on (e.ssn = w.essn))
+  group by pno 
+  order by avg(salary)
+) as pms on (p.pnumber = pms.num_proj));
