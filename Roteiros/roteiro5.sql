@@ -29,3 +29,6 @@ from ( project as p join (
   group by pno 
   order by avg(salary)
 ) as pms on (p.pnumber = pms.num_proj));
+
+--11
+select ssn, count(pno) as qtd_proj from (employee as e left outer join works_on as w on (e.ssn = w.essn)) group by ssn order by count(pno);
