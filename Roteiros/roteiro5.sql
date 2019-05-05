@@ -12,7 +12,9 @@ select s.fname as nome_supervisor, count(*) as qtd_supervisionados from (employe
 y s.ssn order by count(*) asc;
 
 --Q5
-
+select s.fname as nome_supervisor, count(*) as qtd_supervisionados from (employee as s right outer join employee as e on (s.ssn = e.supers
+sn)) group by s.ssn order by count(*);
+                                                                                                              
 --Q6
 SELECT MIN(qtd) AS qtd FROM (SELECT count(*) AS qtd FROM works_on AS w GROUP BY w.pno) AS foo;
 
