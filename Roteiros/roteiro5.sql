@@ -8,6 +8,8 @@ SELECT AVG(e.salary) FROM employee AS e WHERE e.sex = 'M' AND RIGHT(e.address, 2
 SELECT e.superssn AS ssn_supervisor, count(*) AS qtd_supervisionados FROM employee AS e GROUP BY e.superssn ORDER BY count(*);
 
 --Q4
+select s.fname as nome_supervisor, count(*) as qtd_supervisionados from (employee as s join employee as e on (s.ssn = e.superssn)) group b
+y s.ssn order by count(*) asc;
 
 --Q5
 
