@@ -18,5 +18,8 @@ sn)) group by s.ssn order by count(*);
 --Q6
 SELECT MIN(qtd) AS qtd FROM (SELECT count(*) AS qtd FROM works_on AS w GROUP BY w.pno) AS foo;
 
---Q7
+--Q8
 select pno, avg(salary) from (works_on as w join employee as e on (e.ssn = w.essn)) group by pno order by avg(salary);
+
+--Q9
+select * from ( project as p join (select pno as num_proj, avg(salary) as media_sal from (works_on as w join employee as e on (e.ssn = w.essn)) group by pno order by avg(salary)) as pms on (p.pnumber = pms.num_proj));
