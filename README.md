@@ -1,4 +1,4 @@
-# UFCG Banco de Dados I
+# UFCG Banco de Dados I 
 
 Esse repositório é utilizado para a disciplina de banco de dados, mas também pode ser usado para qualquer aplicação de SGBD PostgreSQL.
 
@@ -199,3 +199,4 @@ Exemplo de EXCLUDE com WHERE:
 ADD CONSTRAINT unico_se_valor
 EXCLUDE USING gist(nome WITH =) WHERE (nome = 'RONNYLDO');
 ```
+ 
