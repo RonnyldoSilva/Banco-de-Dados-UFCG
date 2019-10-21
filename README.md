@@ -1,5 +1,5 @@
 # UFCG Banco de Dados I 
-
+ 
 Esse repositório é utilizado para a disciplina de banco de dados, mas também pode ser usado para qualquer aplicação de SGBD PostgreSQL.
 
 ## Acesso ao VM e ao SGBD
